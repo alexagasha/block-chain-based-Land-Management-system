@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Unbounded', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9), url('https://via.placeholder.com/1920x1080?text=Web3+Background') no-repeat center/cover fixed;
+  color: #e0f2fe;
+  margin: 0;
+  padding: 0;
+}
+
+.header-section {
+  background: linear-gradient(90deg, #1e40af, #0ea5e9);
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main-section {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  color: #1f2937;
+  overflow: hidden;
+  position: relative;
+  min-height: calc(100vh - 300px);
+}
+
+.info-section {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e40af;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+  transform: translateY(-5px);
+}
+
+.moving-object {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.leaf-1 {
+  width: 50px;
+  height: 25px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border-radius: 50% 0;
+  top: 15%;
+  left: 5%;
+  animation: float 7s ease-in-out infinite;
+}
+
+.leaf-2 {
+  width: 40px;
+  height: 20px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border-radius: 50% 0;
+  top: 70%;
+  right: 10%;
+  animation: diagonal 9s ease-in-out infinite;
+}
+
+.coffee-bean {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(45deg, #7c2d12, #4a2c2a);
+  border-radius: 50%;
+  bottom: 15%;
+  left: 45%;
+  animation: bounce 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-60px); }
+}
+
+@keyframes diagonal {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(60px, -60px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+@keyframes marquee-animation {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.footer-section {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: white;
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: #1f2937;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.btn-outline:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9fafb;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  padding: 0.75rem;
+  transition: background 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #e5e7eb;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+  .marquee-container {
+    height: 60px;
+  }
+  .marquee-content img {
+    height: 48px;
+    margin-right: 1rem;
+  }
+  .leaf-1, .leaf-2, .coffee-bean {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .header-section {
+    padding: 1.5rem;
+  }
+}

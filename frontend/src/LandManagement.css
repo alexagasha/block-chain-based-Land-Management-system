@@ -1,0 +1,285 @@
+/* Base container */
+.container {
+  position: relative;
+  padding-top: 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Logout button */
+.logout-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+}
+
+.logout-button button {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.logout-button button:hover {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  transform: translateY(-2px);
+}
+
+/* Card styling */
+.card {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Footer */
+footer {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eaeaea;
+}
+
+/* Land list items */
+.list-group-item {
+  background-color: #fdfdfd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 15px 20px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #e8e8e8;
+}
+
+.list-group-item:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================
+   New Feature Styles
+   ======================== */
+
+/* Coordinates display */
+.coordinates-display {
+  background: #f8faff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: #37474f;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coordinates-display span {
+  font-weight: 500;
+  color: #0277bd;
+}
+
+/* Improved forms */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 6px rgba(33, 150, 243, 0.3);
+  outline: none;
+}
+
+form button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: translateY(-2px);
+}
+
+/* ========================
+   Header - Logo, Title, Buttons
+   ======================== */
+.header-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.header-section .logo-img {
+  height: 50px; /* adjust as needed */
+  width: auto;
+  flex-shrink: 0;
+}
+
+.header-section .header-title {
+  flex: 1; /* take remaining space */
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+.header-section .space-x-4 {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .header-section .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-section .header-title {
+    text-align: center;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .header-section .space-x-4 {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section .header-title {
+    font-size: 1.25rem;
+  }
+
+  .header-section .logo-img {
+    height: 40px;
+  }
+
+  .header-section .space-x-4 {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* ========================
+   Developer Section 
+   ======================== */
+.developer-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.0rem; 
+  margin-bottom: 1rem;
+}
+
+.developer-card {
+  text-align: center;
+  transition: transform 0.3s;
+  padding: 0.8rem;
+}
+
+.developer-card:hover {
+  transform: scale(1.05);
+}
+
+.developer-img {
+  height: 100px; 
+  width: 100px;  
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.developer-img-large {
+  height: 140px; 
+  width: 140px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .developer-img, .developer-img-large {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .developer-img, .developer-img-large {
+    width: 70%;
+    height: auto;
+  }
+}
+/* Ensure main content does not overlap footer */
+.main-section {
+  flex-grow: 1; /* keeps main section flexible */
+  padding-bottom: 150px; /* space for footer so content doesn't scroll under it */
+  position: relative;
+}
+
+/* Footer always visible at bottom */
+.footer-section {
+  position: relative; /* remove absolute/fixed if present */
+  z-index: 10; /* make sure footer is on top */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-section {
+    padding-bottom: 180px; /* more space on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-section {
+    padding-bottom: 200px;
+  }
+}

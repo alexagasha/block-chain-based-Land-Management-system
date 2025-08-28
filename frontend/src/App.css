@@ -1,0 +1,281 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+
+/* Body Styling */
+body {
+  font-family: "Unbounded", "Roboto", sans-serif;
+  background: linear-gradient(to right, #667ca2, #005f73),
+    url("./photos/blockchain2.jpeg") no-repeat center/cover fixed;
+  color: #22a7ea;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Section Styling */
+.section {
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header-section {
+  background: linear-gradient(to right, #003366, #005f73);
+  color: white;
+  padding: 30px;
+}
+
+/* Marquee Container */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-animation 15s linear infinite;
+  white-space: nowrap; /* Ensures content stays in one line */
+}
+
+.marquee-content img {
+  height: 100px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* Main Section */
+.main-section {
+  background: white;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Info Section */
+.info-section {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  color: #005f73;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Moving Objects */
+.moving-object {
+  position: absolute;
+  z-index: 0;
+}
+
+/* Leaf 1 */
+.leaf-1 {
+  width: 40px;
+  height: 20px;
+  background: green;
+  border-radius: 50% 0;
+  top: 20%;
+  left: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Leaf 2 */
+.leaf-2 {
+  width: 30px;
+  height: 15px;
+  background: green;
+  border-radius: 50% 0;
+  top: 60%;
+  right: 15%;
+  animation: diagonal 8s ease-in-out infinite;
+}
+
+/* Coffee Bean */
+.coffee-bean {
+  width: 20px;
+  height: 20px;
+  background: brown;
+  border-radius: 50%;
+  bottom: 10%;
+  left: 50%;
+  animation: bounce 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes diagonal {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, -50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Footer Section */
+.footer-section {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Container */
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: white;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Typography */
+h1 {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #004b99;
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.5);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.5);
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  box-shadow: 0 4px 8px rgba(23, 162, 184, 0.5);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
+}
+
+/* List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 12px;
+  transition: background 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #e3e3e3;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .card {
+    padding: 15px;
+  }
+  button {
+    font-size: 14px;
+  }
+}
